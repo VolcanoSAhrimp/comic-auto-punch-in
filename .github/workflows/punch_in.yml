@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v1
       - name: "Punch in"
         run: ./punch_in
-      - name: "Run qiandao.py"
+      - name: "运行qiandao.py"
         run: |
           python -m pip install --upgrade pip
           pip install requests  # 安装 requests 库
