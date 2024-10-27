@@ -30,19 +30,19 @@ def get_jinman_credentials():
     except json.JSONDecodeError as e:
         print(f"Failed to parse configuration data: {e}")
 
-    return None
-
-jinman_data = get_jinman_credentials()
-print(jinman_data)
-# 用户名和密码
-payload = {
-    'username': jinman_data.get('username'),
-    'password': jinman_data.get('password'),
-    'submit_login': '1',
-}
+    return config_data
 
 # 发送登录请求
 with requests.Session() as session:
+    jinman_data = get_jinman_credentials()
+    print("jinman_data:",jinman_data)
+    # 用户名和密码
+    payload = {
+        'username': jinman_data.get('username'),
+        'password': jinman_data.get('password'),
+        'submit_login': '1',
+    }
+    print("payload:", payload)
     LOGIN_response = session.post(LOGIN_URL, data=payload, headers=headers)
 
     # 成功返回200，不成功返回301
