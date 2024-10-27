@@ -5,9 +5,9 @@ import json
 
 # 如果运行报错可能是换域名了，进官网会自动重定向新的域名，把老的换成新的域名后面路径不用改
 # JM域名:    18comic-blackmyth.club/login        ->      18comic-hok.xyz/login
-LOGIN_URL = 'https://jmcomic.me/login'  # 登录URL
-SIGN_URL = 'https://jmcomic.me/ajax/user_daily_sign'  # 签到URL
-LOGOUT_URL = 'https://jmcomic.me/logout'  # 退出URL
+LOGIN_URL = 'https://18comic-hok.vip/login'  # 登录URL
+SIGN_URL = 'https://18comic-hok.vip/ajax/user_daily_sign'  # 签到URL
+LOGOUT_URL = 'https://18comic-hok.vip/logout'  # 退出URL
 
 # 请求头
 headers = {
@@ -47,10 +47,10 @@ with requests.Session() as session:
         'password': jinman_data.get('password'),
         'submit_login': '1',
     }
-    print("payload:", payload)
+    # print("payload:", payload)
     LOGIN_response = session.post(LOGIN_URL, data=payload, headers=headers)
     print(LOGIN_response.status_code)
-    print(LOGIN_response.text)
+    # print(LOGIN_response.text)
     # 成功返回200，不成功返回301
     if LOGIN_response.status_code == 200:
         # 获取返回的json判断是否登录成功
