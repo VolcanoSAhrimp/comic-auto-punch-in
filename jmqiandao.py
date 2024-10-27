@@ -33,6 +33,7 @@ def get_jinman_credentials():
     return None
 
 jinman_data = get_jinman_credentials()
+print(jinman_data)
 # 用户名和密码
 payload = {
     'username': jinman_data.get('username'),
