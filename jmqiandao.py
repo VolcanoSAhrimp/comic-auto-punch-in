@@ -14,7 +14,8 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
     # 'Content-Type': 'application/javascript; charset=utf-8',
-    'Cookie':'__cflb=02DiuDFSTg91mAHCXokVePBgH1pMSYFvSYiFDCTHY23Rv; AVS=f3vqmhcgo1ik1hlk7nkk9744s1; cover=1; ipcountry=IN; ipm5=037f1fc70de5f824b9d3b9aefd029c69; yuo1=%7B%22objName%22:%22tfb6rWVEQxqMwv%22,%22request_id%22:1,%22zones%22:%5B%7B%22idzone%22:%225067278%22,%22sub%22:%2277%22,%22container%22:%7B%7D,%22here%22:%7B%7D%7D%5D%7D; cf_clearance=mYL6Bp.ytoB7SkRxb2JNVMgln_IjjLXVCRSLtr8AOWo-1729997958-1.2.1.1-NSa18Zcm5KPgkSxzgFStmXuZ._iYU9HrhOzXEziSUTNx2YSD7QDQRgrKq6.P4MWCuqwVxtTxFbCTg9PfLvZ7MbPNjyv1AFKXq7XfuV2LKQkPdqHl1obasY5DcW4ZuxxdRfq01WoSzdMVYq4hTMWYKatUBqmpVDdczJAe2Vcz14DWSgUFqram90_MNtfStW3DNgNsPLrFeoNRqWPN0i6AP3UyIeg7hbE0coZQpPwxcZDgOuoVeMJyvCAakVm8D2qv6qAQvGRIgj.pAHZqnfzRStoThRy2qmusSLZ4mz0QBBzLPm0TcPt7KPyh1g0yjgsL8AJz4RVnhojcDJ_RQwl2f6kq2t2Ykiavqa4xsA6VI3FVmjOHsS0sTfZ31RZEFn5rINS6_apnYOhgFMJoJH39pw1NEeeOkRhzqZpKDOXnDSn4WccKy8fAUP7D0uEJFPcTZ0teuBoaNelsCSTeDb1CcA'
+    'Cookie':'__cflb=02DiuDFSTg91mAHCXokVePBgH1pMSYFvSYiFDCTHY23Rv; AVS=f3vqmhcgo1ik1hlk7nkk9744s1; cover=1; ipcountry=IN; ipm5=037f1fc70de5f824b9d3b9aefd029c69; yuo1=%7B%22objName%22:%22tfb6rWVEQxqMwv%22,%22request_id%22:1,%22zones%22:%5B%7B%22idzone%22:%225067278%22,%22sub%22:%2277%22,%22container%22:%7B%7D,%22here%22:%7B%7D%7D%5D%7D; cf_clearance=mYL6Bp.ytoB7SkRxb2JNVMgln_IjjLXVCRSLtr8AOWo-1729997958-1.2.1.1-NSa18Zcm5KPgkSxzgFStmXuZ._iYU9HrhOzXEziSUTNx2YSD7QDQRgrKq6.P4MWCuqwVxtTxFbCTg9PfLvZ7MbPNjyv1AFKXq7XfuV2LKQkPdqHl1obasY5DcW4ZuxxdRfq01WoSzdMVYq4hTMWYKatUBqmpVDdczJAe2Vcz14DWSgUFqram90_MNtfStW3DNgNsPLrFeoNRqWPN0i6AP3UyIeg7hbE0coZQpPwxcZDgOuoVeMJyvCAakVm8D2qv6qAQvGRIgj.pAHZqnfzRStoThRy2qmusSLZ4mz0QBBzLPm0TcPt7KPyh1g0yjgsL8AJz4RVnhojcDJ_RQwl2f6kq2t2Ykiavqa4xsA6VI3FVmjOHsS0sTfZ31RZEFn5rINS6_apnYOhgFMJoJH39pw1NEeeOkRhzqZpKDOXnDSn4WccKy8fAUP7D0uEJFPcTZ0teuBoaNelsCSTeDb1CcA',
+    'Accept-language':'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
 
 }
 # headers = {
@@ -48,7 +49,7 @@ with requests.Session() as session:
         'password': jinman_data.get('password'),
         'submit_login': '1',
     }
-    # print("payload:", payload)
+    print("headers=", headers)
     LOGIN_response = session.post(LOGIN_URL, data=payload, headers=headers)
     print(LOGIN_response.status_code)
     # print(LOGIN_response.text)
