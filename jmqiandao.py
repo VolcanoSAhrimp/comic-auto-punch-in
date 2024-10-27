@@ -10,14 +10,14 @@ SIGN_URL = 'https://18comic.vip/ajax/user_daily_sign'  # 签到URL
 LOGOUT_URL = 'https://18comic.vip/logout'  # 退出URL
 
 # 请求头
-# headers = {
-#     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-#     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-# }
 headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0',
-    'Content-Type': 'application/x-www-form-urlencoded;',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
 }
+# headers = {
+#     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0',
+#     'Content-Type': 'application/x-www-form-urlencoded;',
+# }
 
 
 def get_jinman_credentials():
@@ -48,6 +48,7 @@ with requests.Session() as session:
     print("payload:", payload)
     LOGIN_response = session.post(LOGIN_URL, data=payload, headers=headers)
     print(LOGIN_response.status_code)
+    print(LOGIN_response.text)
     # 成功返回200，不成功返回301
     if LOGIN_response.status_code == 200:
         # 获取返回的json判断是否登录成功
