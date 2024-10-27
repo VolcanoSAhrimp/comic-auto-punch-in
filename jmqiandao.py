@@ -13,6 +13,8 @@ LOGOUT_URL = 'https://jmcomic.me/logout'  # 退出URL
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+    'Cookie':'__cflb=02DiuDFSTg91mAHCXokVePBgH1pMSYFvSYiFDCTHY23Rv; AVS=f3vqmhcgo1ik1hlk7nkk9744s1; cover=1; ipcountry=IN; cf_clearance=JlzGNXMXvPz48FfY7fSZYGFchvYhty6GtdPX33UjGDk-1729995565-1.2.1.1-ECGRzbD53gwXrHCQBhqzTzjgwd_RekSpCJsI4hH_j4S1YPAAjq_MBthx.qsAE0OwU5nnSj5anaqAfD1d3KVRZYgkY.2uEqKbN55CGH6yuXgMZ4vBCXtidg99UXtn8YT4mCkSUgPHMASywXK5LTrl9szLA.SEKWXjK5mccEPjiTLI.DXfWP7yq6oAYQ7lGPGLKGo7HOJI9pZ6nHBiouZe3754lUDb8cVzyh_iVOc2SPmdzy5gG2Wtx00vpIoMuXPYArgx3uu8NxpkGo3d3xmgTVOVlzrD1e1u2kIWtSdkVBLSIAMhd2gxBIUeM7c1854Pg1.QiMnUnDS8OVaaI.iK7TrVKCMJ6fKMErlkKvYdiuYLc2i4ty5ZwqAat9lGbxkkDmgdZ1YuArCn2jZq4zNn_ne9SG1MD16IxLDuAFcOATi_D4cCe4pVmd_vWkgqWASqQ_i9EikjJcOpZatY3llxrw; yuo1=%7B%22objName%22:%22m9azIIc1YgO8%22,%22request_id%22:1,%22zones%22:%5B%7B%22idzone%22:%225067278%22,%22sub%22:%2277%22,%22container%22:%7B%7D,%22here%22:%7B%7D%7D%5D%7D; ipm5=037f1fc70de5f824b9d3b9aefd029c69'
+
 }
 # headers = {
 #     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0',
