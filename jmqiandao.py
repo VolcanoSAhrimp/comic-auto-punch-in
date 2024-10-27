@@ -49,10 +49,10 @@ with requests.Session() as session:
         'password': jinman_data.get('password'),
         'submit_login': '1',
     }
-    print("headers=", headers)
+    # print("headers=", headers)
     LOGIN_response = session.post(LOGIN_URL, data=payload, headers=headers)
     print(LOGIN_response.status_code)
-    # print(LOGIN_response.text)
+    print("html=",LOGIN_response.text)
     # 成功返回200，不成功返回301
     if LOGIN_response.status_code == 200:
         # 获取返回的json判断是否登录成功
