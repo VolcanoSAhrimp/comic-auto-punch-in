@@ -17,7 +17,7 @@ headers = {
 
 
 def get_jinman_credentials():
-    config_data = os.environ.get('CONFIG_DATA')
+    config_data = os.environ.get('ACCOUNTS')
     if not config_data:
         print("Configuration data not provided.")
         return None
