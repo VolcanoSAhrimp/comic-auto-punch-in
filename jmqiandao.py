@@ -35,7 +35,6 @@ def get_jinman_credentials():
 # 发送登录请求
 with requests.Session() as session:
     jinman_data = get_jinman_credentials()
-    print("jinman_data:",jinman_data)
     # 用户名和密码
     payload = {
         'username': jinman_data.get('username'),
@@ -44,7 +43,7 @@ with requests.Session() as session:
     }
     print("payload:", payload)
     LOGIN_response = session.post(LOGIN_URL, data=payload, headers=headers)
-
+    print(LOGIN_response.status_code)
     # 成功返回200，不成功返回301
     if LOGIN_response.status_code == 200:
         # 获取返回的json判断是否登录成功
