@@ -10,9 +10,13 @@ SIGN_URL = 'https://18comic.vip/ajax/user_daily_sign'  # 签到URL
 LOGOUT_URL = 'https://18comic.vip/logout'  # 退出URL
 
 # 请求头
+# headers = {
+#     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+#     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+# }
 headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0',
+    'Content-Type': 'application/x-www-form-urlencoded;',
 }
 
 
