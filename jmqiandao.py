@@ -5,7 +5,7 @@ import json
 
 # 如果运行报错可能是换域名了，进官网会自动重定向新的域名，把老的换成新的域名后面路径不用改
 # JM域名:    18comic-blackmyth.club/login        ->      18comic-hok.xyz/login
-OGIN_URL = 'https://18comic-idv.club/login'  # 登录URL
+LOGIN_URL = 'https://18comic-idv.club/login'  # 登录URL
 SIGN_URL = 'https://18comic-idv.club/ajax/user_daily_sign'  # 签到URL
 LOGOUT_URL = 'https://18comic-idv.club/logout'  # 退出URL
 
